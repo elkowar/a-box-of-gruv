@@ -1,6 +1,6 @@
 # ElKowar's boxful of gruv
 
-> There are three things in life you can never have enough of. `#282828`, `#ebdbb2` and `#8ec07c.`  
+> There are three things in life you can never have enough of: `#282828`, `#ebdbb2` and `#8ec07c`.  
 > ~ ElKowar
 
 This is a collection of my gruvbox themes for different webpages and applications.
