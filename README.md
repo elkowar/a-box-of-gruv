@@ -55,7 +55,7 @@ Make sure to describe the thing you're fixing or adding, and to use css variable
 
 
 > If live gives you lemons, make sure they match `#fabd2f`.  
-> ~ Cave Johnson
+> ~ Cave Johnson*
 
 
 _*citation needed_
