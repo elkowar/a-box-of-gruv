@@ -1,7 +1,7 @@
 # ElKowar's boxful of gruv
 
 > There are three things in life you can never have enough of. `#282828`, `#ebdbb2` and `#8ec07c.`  
-> _~ ElKowar_ 
+> ~ ElKowar
 
 This is a collection of my gruvbox themes for different webpages and applications.
 
@@ -55,7 +55,7 @@ Make sure to describe the thing you're fixing or adding, and to use css variable
 
 
 > If live gives you lemons, make sure they match `#fabd2f`.  
-> _~ Cave Johnson_*
+> ~ Cave Johnson
 
 
 _*citation needed_
