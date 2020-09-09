@@ -55,6 +55,10 @@
     display: none !important;
   }
 
+  .search-form .highlight {
+    border: none;
+  }
+
   .inline-nav-menu__container {
     border: none !important;
   }
