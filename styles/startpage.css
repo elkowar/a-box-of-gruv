@@ -1,0 +1,152 @@
+/* ==UserStyle==
+@name           Startpage gruvbox
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("startpage.com") {
+  :root {
+    --bg1: #1d2021;
+    --bg2: #282828;
+    --bg3: #504945;
+    --bg4: #202020;
+    --fg1: #ebdbb2;
+    /*--fg1: #d5c4a1;*/
+    --fg3: #a89984;
+    --col_blue: #83a598;
+    --col_aqua: #8ec07c;
+    --col_aqua_dark: #689d6a;
+  }
+
+  * {
+    font-family: xos4 Terminus !important;
+    text-decoration: none;
+  }
+
+  body,
+  .layout,
+  .layout-web,
+  .w-gl,
+  .header__container {
+    background-color: var(--bg2) !important;
+  }
+
+  body {
+    padding: 0 5rem;
+  }
+
+  .header__container {
+    border: none !important;
+    margin-left: 0;
+    padding-top: 1rem;
+  }
+  .header__logo {
+    /*background-image: url("https://duckduckgo.com/assets/logo_header.alt.v108.svg") !important;*/
+    display: none;
+    background-image: none;
+    width: 0;
+  }
+
+  .search-form__button .ico-wrapper,
+  .search-form__clear-button {
+    background: none;
+    display: none !important;
+  }
+
+  .inline-nav-menu__container {
+    border: none !important;
+  }
+  .inline-nav-menu__link__active,
+  .inline-nav-menu__link:hover {
+    border-bottom: 1px solid var(--fg1) !important;
+    color: var(--fg1) !important;
+  }
+  .vo-sp__description {
+    color: var(--fg4);
+  }
+
+  .search-form__form {
+    background-color: var(--bg4);
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    height: 2.8rem;
+  }
+
+  *,
+  .wp-qi-sb__description,
+  .vo-sp__title {
+    color: var(--fg1);
+  }
+  .w-gl__result-url,
+  .wp-qi-sb__title,
+  .title {
+    color: var(--col_aqua) !important;
+    font-size: 12px;
+  }
+
+  .search-filter-region__selected-all-regions-icon,
+  .w-gl__anonymous-view-url,
+  .inline-nav-menu__mask-right {
+    display: none;
+  }
+
+  .layout-web__mainline,
+  .layout-images__mainline,
+  .mainline-results .mainline-results__web,
+  .layout-web__sidebar,
+  .w-gl__result-url-container,
+  .layout-video__mainline,
+  .mainline-results {
+    max-width: unset !important;
+  }
+
+  .layout-images__inline-nav-container {
+    padding-left: 12px;
+  }
+
+  .layout-web__body,
+  .layout-images__inline-nav-container,
+  .layout-video__body,
+  .layout-news__body {
+    margin-left: 0;
+  }
+
+  .wp-qi-sb__img-block {
+    border: none;
+    border-radius: 0;
+  }
+
+  .wp-qi-sb__result {
+    border: none;
+    box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.5);
+  }
+  .wp-qi-tp__result,
+  .anonymous-view-url {
+    display: none !important;
+  }
+
+  .hamburger-menu-container {
+    transform: translate(-50%, 50%);
+  }
+
+  button.advanced {
+    background: var(--bg4) !important;
+    padding: 0.5rem;
+  }
+
+  .menu-container > * {
+    margin: 0 0.5rem !important;
+    color: var(--fg3) !important;
+  }
+
+  .image-container {
+    margin: 0.5rem !important;
+  }
+
+  a:hover {
+    text-decoration-color: var(--fg1) !important;
+  }
+}
