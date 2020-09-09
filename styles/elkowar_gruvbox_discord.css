@@ -1,27 +1,27 @@
 :root {
   /*  ----  */
   --bg1: #282828;
-  --bg2: #222222;
+  --bg2: #32302f;
   --bg3: #1d2021;
-  --button: #daddee1a;
+  --button: #a89984e1a;
   /*  ----  */
   --fg2: #a89984;
-  --fg1: #fbf1c7;
-  --disabled: #696969;
+  --fg1: #ebdbb2;
+  --disabled: #a89984;
   /*  ----  */
   --accent: #83c07c;
   --accent2: #83a598;
-  --contrast: #ffffff;
+  --contrast: #a89984;
   /*  ----  */
 
-  --red: #fb4934;
+  --red: #cc241d;
   --purple: #b16286;
   --blue: #458588;
-  --cyan: #7acfe4;
-  --green: #83c07c;
-  --yellow: #fabd2f;
-  --border1: #223344;
-  --border2: #334455;
+  --cyan: #689d6a;
+  --green: #98971a;
+  --yellow: #d79921;
+  --border1: #282828;
+  --border2: #32302f;
   -moz-tab-size: 2;
 }
 
@@ -57,7 +57,7 @@
 }
 
 * {
-  font-family: "Terminus (TTF)" !important;
+  font-family: "FantasqueSansMono Nerd Font" !important;
   font-weight: normal !important;
   font-size: 1rem !important;
 }
@@ -226,4 +226,3 @@ div[class*="chat"] div[class*="root"] {
 div[class*="chat"] div[class*="root"] canvas {
   /*border-radius: 20px;*/
 }
-
