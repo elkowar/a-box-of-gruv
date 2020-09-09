@@ -68,6 +68,7 @@
   }
 
   .search-form__form {
+    max-width: 700px !important;
     background-color: var(--bg4);
     border: none;
     border-radius: 5px;
@@ -100,7 +101,7 @@
   .w-gl__result-url-container,
   .layout-video__mainline,
   .mainline-results {
-    max-width: unset !important;
+    max-width: 700px !important;
   }
 
   .layout-images__inline-nav-container {
@@ -140,6 +141,11 @@
   .menu-container > * {
     margin: 0 0.5rem !important;
     color: var(--fg3) !important;
+  }
+
+  /* hide unnecessary menu options */
+  .menu-container > *:not(:first-child) {
+    display: none;
   }
 
   .image-container {
