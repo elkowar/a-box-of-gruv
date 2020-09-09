@@ -153,6 +153,8 @@ button[class*="lookLink"] {
 
 img[class*="avatar"] {
   filter: sepia(30%) !important;
+  border-radius: 50%;
+  overflow: hidden;
   transition: filter 0.1s, transform 0.1s ease-in-out;
 }
 img[class*="avatar"]:hover {
@@ -224,3 +226,4 @@ div[class*="chat"] div[class*="root"] {
 div[class*="chat"] div[class*="root"] canvas {
   /*border-radius: 20px;*/
 }
+
