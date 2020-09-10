@@ -36,7 +36,7 @@ as that one will accept the stylus syntax used here.
 ### Discord
 
 The Discord-theme can be installed using any css-loader of your choice. 
-If all you want is to apply this theme, I recommend [beautifuldiscord](https://github.com/leovoel/BeautifulDiscord).
+If all you want is to apply this theme, I recommend [discocss](https://github.com/mlvzk/discocss).
 Follow the instructions for your chosen CSS loader, and load in the theme. That's all!
 
 ## Showcase
