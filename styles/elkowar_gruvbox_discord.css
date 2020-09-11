@@ -1,4 +1,15 @@
 :root {
+  -moz-tab-size: 2;
+
+  --red: #fb4934;
+  --purple: #b16286;
+  --blue: #458588;
+  --green: #b8bb26;
+  --aqua: #83c07c;
+  --yellow: #fabd2f;
+  --border1: #223344;
+  --border2: #334455;
+
   /*  ----  */
   --bg1: #282828;
   --bg2: #222222;
@@ -9,20 +20,10 @@
   --fg1: #fbf1c7;
   --disabled: #696969;
   /*  ----  */
-  --accent: #83c07c;
+  --accent: var(--aqua);
   --accent2: #83a598;
   --contrast: #ffffff;
   /*  ----  */
-
-  --red: #fb4934;
-  --purple: #b16286;
-  --blue: #458588;
-  --cyan: #7acfe4;
-  --green: #83c07c;
-  --yellow: #fabd2f;
-  --border1: #223344;
-  --border2: #334455;
-  -moz-tab-size: 2;
 }
 
 .theme-dark {
@@ -62,6 +63,7 @@
   font-size: 1rem !important;
 }
 
+
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-handle,
@@ -70,7 +72,57 @@
   background-color: rgba(0, 0, 0, 0) !important;
 }
 
+/* general */
+[class*="colorBrand"] {
+  color: var(--accent);
+}
+
+[class*="colorDanger"] {
+  color: var(--red);
+}
+
+[class*="lookBlank"] {
+  color: var(--fg2);
+}
+
+[class*="input"]:focus {
+    border-color: var(--accent);
+}
+
 /* sections */
+
+[id*="popout"] [class*="container"] {
+  background-color: var(--bg1);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+  color: var(--fg1) !important;
+}
+[id*="popout"] [class*="container"] ::after {
+  background-image: none !important;
+}
+
+[class*="live"][class*="textBadge"] {
+  background-color: var(--red) !important;
+  color: var(--fg1);
+}
+
+[class*="navButtonActive"] {
+    background-color: unset;
+    color: var(--fg1);
+}
+
+[class*="option"][class*="selected"] {
+  background-color: var(--bg2) !important;
+}
+
+[class*="resultsGroup"] * {
+  color: var(--fg2) !important;
+}
+[class*="resultsGroup"] [class*="filter"] {
+  color: var(--fg1) !important;
+}
+[class*="resultsGroup"] [class*="header"] {
+  color: var(--fg1) !important;
+}
 
 [class*="peopleColumn"] {
   background-color: var(--bg2);
@@ -117,6 +169,19 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+[class*="userPopout"] [class*="body"],
+[class*="userPopout"] [class*="footer"]{
+    background-color: var(--bg1);
+}
+[class*="userPopout"] [class*="headerNormal"] {
+    background-color: var(--bg2);
+}
+
+[class*="headerPlaying"] * {
+    background-color: var(--accent) !important;
+}
+
 
 /* components */
 
@@ -169,7 +234,7 @@ img[class*="avatar"]:hover {
 [class*="divider"] {
   border-color: var(--bg3);
 }
-[class*="divider"][class*="isUnread"]{
+[class*="divider"][class*="isUnread"] {
   border-color: var(--red) !important;
 }
 
@@ -195,12 +260,17 @@ button[class*="lookFilled"] {
 [class*="modal"] [class*="quickMessage-"],
 [class*="modal"] [class*="inner-"],
 [class*="modal"] [class*="header-"]:not(header):not(h2),
-[class*="modal"] [class*="uploadModal-"] {
+[class*="modal"] [class*="uploadModal-"],
+[role*="dialog"] form  {
   background-color: var(--bg1) !important;
 }
 
+[role*="dialog"] form [class*="footer"]{
+    background-color: var(--bg2);
+}
+
 [class*="modal"] [class*="sourceScroller"],
-[class*="modal"] [class*="segmentContainer-"] [class*="segmentControl"] /*go live source selector header bar*/{
+[class*="modal"] [class*="segmentContainer-"] [class*="segmentControl"] /*go live source selector header bar*/ {
   background-color: var(--bg3) !important;
 }
 [class*="modal"] [class*="header"] {
@@ -218,12 +288,12 @@ button[class*="lookFilled"] {
   padding-bottom: 0.5rem;
 }
 
-
 div[class*="chat"] div[class*="root"] {
-  background-color: #282828;
+  background-color: var(--bg1);
 }
 
-div[class*="chat"] div[class*="root"] canvas {
-  /*border-radius: 20px;*/
+div[class*="rtcConnectionStatus"] *,
+[class*="circleIconButton"] {
+  color: var(--accent) !important;
 }
 
