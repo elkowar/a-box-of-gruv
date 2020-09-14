@@ -36,6 +36,9 @@
   body {
     padding: 0 5rem;
   }
+  .sp-gl__container {
+    border: none;
+  }
 
   .layout-web__footer .footer {
     display: none;
