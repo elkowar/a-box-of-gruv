@@ -37,6 +37,22 @@
     padding: 0 5rem;
   }
 
+  .layout-web__footer .footer {
+    display: none;
+  }
+
+  .pagination button {
+    color: var(--fg1);
+    border-radius: 0 !important;
+  }
+  .pagination button.num--active {
+    color: var(--bg1);
+    background-color: var(--col_aqua_dark);
+  }
+  .pagination button.num--active:hover {
+    background-color: var(--col_aqua);
+  }
+
   .header__container {
     border: none !important;
     margin-left: 0;
@@ -88,8 +104,12 @@
   .w-gl__result-url,
   .wp-qi-sb__title,
   .title {
-    color: var(--col_aqua) !important;
+    color: var(--fg3) !important;
     font-size: 12px;
+  }
+
+  *[class*="result-title"] > * {
+    color: var(--col_aqua) !important;
   }
 
   .search-filter-region__selected-all-regions-icon,
