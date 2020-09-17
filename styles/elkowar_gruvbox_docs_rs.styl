@@ -7,7 +7,8 @@
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document domain("docs.rs"),
-domain("doc.rust-lang.org") {
+domain("doc.rust-lang.org"),
+url-prefix("https://gtk-rs.org/docs/") {
     :root {
         --bg0: #1d2021;
         --bg1: #222222;
@@ -30,19 +31,44 @@ domain("doc.rust-lang.org") {
         --monospaced-small: cozette;
     }
 
-    
+
     * {
         color: var(--fg0);
+        border-color: var(--fg3) !important;
     }
     
+    a {
+        color: unset;
+    }
+
+    .content span.externcrate,
+    .content span.mod,
+    .content a.mod,
+    .block a.current.mod,
+    .docblock:not(.type-decl) a:not(.srclink):not(.test-arrow),
+    .docblock-short a:not(.srclink):not(.test-arrow),
+    .stability a {
+        color: var(--col_accent);
+    }
+
+    .help-button {
+        background: var(--bg1);
+        margin-top: 3px;
+        border: none;
+    }
+
     .nav-container {
         background-color: var(--bg2) !important;
         border: none !important;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
         & * {
             color: var(--fg1) !important;
         }
     }
+
+    .in-band {
+        background: none;
+    }
+
 
     button#theme-picker {
         display: none;
@@ -88,7 +114,7 @@ domain("doc.rust-lang.org") {
 
     .sidebar {
         background-color: var(--bg1) !important;
-        box-shadow: inset -5px 0 10px 0 rgba(0, 0, 0, 0.4);
+        box-shadow: inset -3px 5px 15px 0 rgba(0, 0, 0, 0.2);
         scrollbar-width: thin !important;
         .logo-container {
             display: none;
@@ -102,9 +128,14 @@ domain("doc.rust-lang.org") {
         .sidebar-title {
             color: var(--col_accent) !important;
         }
-        
-        #all-types {
+
+        #all-types,
+        .location {
             background-color: var(--bg0);
+            color: var(--fg1);
+            border-color: var(--fg1);
+            border-width: 1px;
+            padding: 0.2rem;
             border-radius: 0;
         }
 
@@ -130,7 +161,6 @@ domain("doc.rust-lang.org") {
         #titles > div:hover,
         #titles > div {
             background-color: var(--bg1);
-            margin: 0;
             margin-top: -0.5rem;
             padding: 0.25rem;
             &.selected {
@@ -174,6 +204,23 @@ domain("doc.rust-lang.org") {
         .collapse-toggle {
             transform: translateY(-3px);
             color: var(--fg3);
+        }
+    }
+
+    pre {
+        font-family: var(--monospaced);
+    }
+    pre.rust {
+        background: var(--bg0) !important;
+        .kw {
+            color: var(--col_blue);
+        }
+        .self,
+        .bool-val,
+        .prelude-val,
+        .attribute,
+        .attribute .ident {
+            color: var(--col_accent);
         }
     }
 }
