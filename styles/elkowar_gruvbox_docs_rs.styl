@@ -36,7 +36,7 @@ url-prefix("https://gtk-rs.org/docs/") {
         color: var(--fg0);
         border-color: var(--fg3) !important;
     }
-    
+
     a {
         color: unset;
     }
@@ -57,13 +57,16 @@ url-prefix("https://gtk-rs.org/docs/") {
         border: none;
     }
 
-    .nav-container {
+    .nav-container,
+    .description-container {
         background-color: var(--bg2) !important;
         border: none !important;
         & * {
             color: var(--fg1) !important;
+            border: none !important;
         }
     }
+
 
     .in-band {
         background: none;
@@ -95,7 +98,7 @@ url-prefix("https://gtk-rs.org/docs/") {
                 color: var(--fg1) !important;
                 border: 1px solid var(--border) !important;
                 box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5) !important;
-                background-color: var(--bg1) !important;
+                background-color: var(--bg4) !important;
             }
             input,
             input:focus {
@@ -206,6 +209,33 @@ url-prefix("https://gtk-rs.org/docs/") {
             color: var(--fg3);
         }
     }
+    
+    /* docs.rs root */
+    input#search {
+        background-color: var(--bg0);
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .pure-button-normal {
+        background: var(--bg0) !important;
+        color: var(--fg2);
+        border-color: var(--bg3) !important;
+    }
+
+    /* search result list */
+    .recent-releases-container {
+        .date {
+            color: var(--fg3);
+        }
+        *:not(.date) {
+            color: var(--fg1) !important;
+        }
+        *:hover {
+            background-color: inherit !important;
+        }
+    }
+
 
     pre {
         font-family: var(--monospaced);
@@ -223,4 +253,28 @@ url-prefix("https://gtk-rs.org/docs/") {
             color: var(--col_accent);
         }
     }
+    
+    .warning {
+        background-color: var(--col_blue) !important;
+        color: var(--bg1);
+    }
+    
+    
+    
+    .pure-menu {
+        .pure-menu-list * {
+            color: var(--fg1) !important;
+        }
+        .pure-menu-link:hover {
+            background-color: var(--bg0) !important;
+        }
+        .pure-menu-active {
+            background-color: var(--bg4) !important;
+            border-bottom: 1px solid var(--fg3) !important;
+        }
+    }
+    
+    
+    
+    
 }
