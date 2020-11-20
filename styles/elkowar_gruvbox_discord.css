@@ -296,4 +296,20 @@ div[class*="rtcConnectionStatus"] *,
 [class*="circleIconButton"] {
   color: var(--accent) !important;
 }
+/* display info about code blocks  */
+code.hljs:not(.inline)::before {
+	content: attr(class) !important;
+	float: right;
+	display: block;
+	width: auto;
+	max-width:  100px;
+	text-align: right;
+	min-width:  auto;
+	margin-top: -107px;
+	line-height: 20px;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	color: var(--fg2);
+	opacity: 0.6;
+}
 
