@@ -8,54 +8,72 @@
 ==/UserStyle== */
 @-moz-document domain("duckduckgo.com") {
     :root {
-        --bg1: #1d2021;
-        --bg2: #282828;
-        --bg3: #504945;
-        --bg4: #202020;
-        --fg1: #ebdbb2;
-        --fg1: #d5c4a1;
-        --fg3: #a89984;
-        --col_blue: #83a598;
+        --elk-font-family: "Terminus (TTF)";
+        --elk-font-size: 14px;
+        
+        --elk-bg-dark: #1d2021;
+        --elk-bg-darkisher: #202020;
+        --elk-bg-darkish: #222222;
+        --elk-bg-normal: #282828;
+        --elk-bg-brighter: #504945;
+        
+        --elk-border: #353331;
+        
+        --elk-fg-normal: #ebdbb2;
+        --elk-fg-brighter: #fbf1c7;
+        --elk-fg-darker: #d5c4a1;
+        --elk-fg-dark: #a89984;
+        --elk-fg-inactive: #696969;
+        
+        --elk-red: #fb4934;
+        --elk-purple: #b16286;
+        --elk-blue: #458588;
+        --elk-green: #b8bb26;
+        --elk-aqua: #83c07c;
+        --elk-yellow: #fabd2f;
+        --elk-orange: #fe8019;
+        
+        --elk-accent: var(--elk-aqua);
     }
 
     body {
-        background-color: var(--bg2);
+        background-color: var(--elk-bg-normal);
     }
 
     *,
     div[class*="result"],
     .result__snippet b,
     .result__date {
-        color: var(--fg1) !important;
+        color: var(--elk-fg-normal) !important;
         font-family: "xos4 terminus" !important;
         font-size: 1rem;
     }
 
 
     #duckbar a.zcm__link {
-        border-bottom-color: var(--fg1) !important;
+        border-bottom-color: var(--elk-fg-normal) !important;
         padding: 0 10px;
         margin: 0 0;
         transition: background-color 0.1s ease-in-out;
         &:hover {
-            background-color: var(--bg1);
+            background-color: var(--elk-bg-dark);
         }
     }
 
     .switch {
-        background-color: var(--bg3);
+        background-color: var(--elk-bg-brighter);
     }
 
     .zci,
     .tile-wrap,
     .metabar,
     .zci-wrap {
-        background-color: var(--bg2) !important;
+        background-color: var(--elk-bg-normal) !important;
         border: none !important;
     }
 
     .tile {
-        background-color: var(--bg2);
+        background-color: var(--elk-bg-normal);
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         border: none !important;
         transition: box-shadow 0.1s ease-in-out;
@@ -66,10 +84,10 @@
 
 
     .footer {
-        background-color: var(--bg2);
+        background-color: var(--elk-bg-normal);
         display: none !important;
         .footer__card {
-            background-color: var(--bg1) !important;
+            background-color: var(--elk-bg-dark) !important;
             border: none;
         }
     }
@@ -83,9 +101,9 @@
 
     .modal__box,
     .modal__header {
-        background: var(--bg2) !important;
+        background: var(--elk-bg-normal) !important;
         & > * {
-            background: var(--bg2) !important;
+            background: var(--elk-bg-normal) !important;
         }
     }
 
@@ -94,38 +112,38 @@
 
     pre.prettyprint,
     code {
-        background-color: var(--bg1);
+        background-color: var(--elk-bg-dark);
     }
 
     .module__toggle--more::after {
-        background: linear-gradient(var(--bg2), var(--bg1)) !important;
+        background: linear-gradient(var(--elk-bg-normal), var(--elk-bg-dark)) !important;
     }
 
     .modal__list__link.is-highlighted {
-        background-color: var(--bg3) !important;
+        background-color: var(--elk-bg-brighter) !important;
     }
 
     .module__clickable-header > * {
-        color: var(--fg1) !important;
+        color: var(--elk-fg-normal) !important;
     }
 
     .btn.btn--full {
-        background-color: var(--bg1);
+        background-color: var(--elk-bg-dark);
         border: none;
     }
 
     .switch__knob {
-        background-color: var(--fg1) !important;
+        background-color: var(--elk-fg-normal) !important;
     }
 
 
 
     .site-wrapper {
         box-shadow: none;
-        background-color: var(--bg2) !important;
+        background-color: var(--elk-bg-normal) !important;
 
         .header-wrap {
-            background-color: var(--bg2);
+            background-color: var(--elk-bg-normal);
         }
     }
 
@@ -136,7 +154,7 @@
     }
 
     form#search_form {
-        background-color: var(--bg4) !important;
+        background-color: var(--elk-bg-darkisher) !important;
         box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
         border: none;
         transition: box-shadow 0.1s ease-in-out;
@@ -152,7 +170,7 @@
         }
 
         a.result__url > * {
-            color: var(--col_blue) !important;
+            color: var(----elk-blue) !important;
             font-family: "cozette" !important;
         }
 
@@ -176,7 +194,7 @@
     .msg__clear:hover,
     .msg__all,
     .msg__all:visited {
-        color: var(--fg1) !important;
+        color: var(--elk-fg-normal) !important;
     }
     
     .dropdown.dropdown--region {
@@ -186,7 +204,7 @@
     #search_form {
         input {
             z-index: 10 !important;
-            background-color: var(--bg4) !important;
+            background-color: var(--elk-bg-darkisher) !important;
             &[type="submit"],
             &[type="button"] {
                 background-color: rgba(0, 0, 0, 0) !important;
@@ -198,7 +216,7 @@
         }
         &.search--focus,
         &.search--hover #search_button {
-            background-color: var(--bg4);
+            background-color: var(--elk-bg-darkisher);
         }
     }
 
@@ -208,16 +226,16 @@
         z-index: 5 !important;
         border: none;
         padding-right: 2px;
-        background-color: var(--bg4);
+        background-color: var(--elk-bg-darkisher);
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
         & > * {
-            background-color: var(--bg4);
+            background-color: var(--elk-bg-darkisher);
             &.t-normal {
-                color: var(--fg3) !important;
+                color: var(--elk-fg-darker) !important;
             }
             &:not(.t-normal) {
                 font-weight: normal !important;
-                color: var(--fg1) !important;
+                color: var(--elk-fg-normal) !important;
             }
         }
     }

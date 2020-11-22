@@ -9,32 +9,46 @@
 @-moz-document domain("docs.rs"),
 domain("doc.rust-lang.org"),
 url-prefix("https://gtk-rs.org/docs/") {
-    :root {
-        --bg0: #1d2021;
-        --bg1: #222222;
-        --bg2: #282828;
-        --bg3: #504945;
-        --bg4: #202020;
-        --fg0: #ebdbb2;
-        --fg1: #fbf1c7;
-        --fg2: #d5c4a1;
-        --fg3: #a89984;
-        --col_blue: #83a598;
-        --col_accent: #8ec07c;
-        --col_accent_dark: #8ec07c;
-        --col_yellow: #fabd2f;
-        --col_red: #fb4934;
-        --border: rgb(53, 51, 49);
 
-        --monospaced: "Jetbrains Mono";
-        --monospaced-size: 14px;
+    :root {
+        --elk-font-family: "Terminus (TTF)";
+        --elk-font-size: 14px;
+        
+        --elk-bg-dark: #1d2021;
+        --elk-bg-darkisher: #202020;
+        --elk-bg-darkish: #222222;
+        --elk-bg-normal: #282828;
+        --elk-bg-brighter: #504945;
+        
+        --elk-border: #353331;
+        
+        --elk-fg-brighter: #fbf1c7;
+        --elk-fg-normal: #ebdbb2;
+        --elk-fg-darker: #d5c4a1;
+        --elk-fg-dark: #a89984;
+        --elk-fg-inactive: #696969;
+        
+        --elk-red: #fb4934;
+        --elk-purple: #b16286;
+        --elk-blue: #458588;
+        --elk-green: #b8bb26;
+        --elk-aqua: #83c07c;
+        --elk-yellow: #fabd2f;
+        --elk-orange: #fe8019;
+        
+        --elk-accent: var(--elk-aqua);
+        
+        
+        /* other stuff */
+        -moz-tab-size: 2;
         --monospaced-small: cozette;
+        --monospaced: "Jetbrains Mono"
     }
 
 
     * {
-        color: var(--fg0);
-        border-color: var(--fg3) !important;
+        color: var(--elk-fg-brighter);
+        border-color: var(--elk-fg-dark) !important;
     }
 
     a {
@@ -48,21 +62,21 @@ url-prefix("https://gtk-rs.org/docs/") {
     .docblock:not(.type-decl) a:not(.srclink):not(.test-arrow),
     .docblock-short a:not(.srclink):not(.test-arrow),
     .stability a {
-        color: var(--col_accent);
+        color: var(--elk-aqua);
     }
 
     .help-button {
-        background: var(--bg1);
+        background: var(--elk-bg-darkish);
         margin-top: 3px;
         border: none;
     }
 
     .nav-container,
     .description-container {
-        background-color: var(--bg2) !important;
+        background-color: var(--elk-bg-normal) !important;
         border: none !important;
         & * {
-            color: var(--fg1) !important;
+            color: var(--elk-fg-brighter) !important;
             border: none !important;
         }
     }
@@ -95,10 +109,10 @@ url-prefix("https://gtk-rs.org/docs/") {
             crate-search:focus {
                 background-image: none;
                 outline: none;
-                color: var(--fg1) !important;
-                border: 1px solid var(--border) !important;
+                color: var(--elk-fg-brighter) !important;
+                border: 1px solid var(--elk-border) !important;
                 box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5) !important;
-                background-color: var(--bg4) !important;
+                background-color: var(--elk-bg-darkish) !important;
             }
             input,
             input:focus {
@@ -116,27 +130,27 @@ url-prefix("https://gtk-rs.org/docs/") {
     }
 
     .sidebar {
-        background-color: var(--bg1) !important;
+        background-color: var(--elk-bg-darkish) !important;
         box-shadow: inset -3px 5px 15px 0 rgba(0, 0, 0, 0.2);
         scrollbar-width: thin !important;
         .logo-container {
             display: none;
         }
         & * {
-            color: var(--fg0);
+            color: var(--elk-fg-brighter);
         }
         h1,
         h2,
         h3,
         .sidebar-title {
-            color: var(--col_accent) !important;
+            color: var(--elk-aqua) !important;
         }
 
         #all-types,
         .location {
-            background-color: var(--bg0);
-            color: var(--fg1);
-            border-color: var(--fg1);
+            background-color: var(--elk-bg-dark);
+            color: var(--elk-fg-brighter);
+            border-color: var(--elk-fg-brighter);
             border-width: 1px;
             padding: 0.2rem;
             border-radius: 0;
@@ -147,8 +161,8 @@ url-prefix("https://gtk-rs.org/docs/") {
         .block {
             a {
                 &.current {
-                    background-color: var(--col_accent) !important;
-                    color: var(--bg2);
+                    background-color: var(--elk-aqua) !important;
+                    color: var(--elk-bg-normal);
                     margin-right: 1.5rem;
                 }
             }
@@ -156,21 +170,21 @@ url-prefix("https://gtk-rs.org/docs/") {
     }
 
     .pure-menu-children {
-        background-color: var(--bg2);
+        background-color: var(--elk-bg-normal);
         box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
     }
 
     #search {
         #titles > div:hover,
         #titles > div {
-            background-color: var(--bg1);
+            background-color: var(--elk-bg-darkish);
             margin-top: -0.5rem;
             padding: 0.25rem;
             &.selected {
-                border-top-color: var(--col_accent);
+                border-top-color: var(--elk-aqua);
             }
             &:not(.selected) {
-                border-top-color: var(--bg1);
+                border-top-color: var(--elk-bg-darkish);
             }
         }
         .result {
@@ -178,7 +192,7 @@ url-prefix("https://gtk-rs.org/docs/") {
                 font-family: var(--monospaced);
             }
             span.desc {
-                color: var(--fg0);
+                color: var(--elk-fg-brighter);
             }
         }
     }
@@ -187,49 +201,49 @@ url-prefix("https://gtk-rs.org/docs/") {
     #rustdoc_body_wrapper,
     html,
     body {
-        background-color: var(--bg2) !important;
-        color: var(--fg1);
+        background-color: var(--elk-bg-normal) !important;
+        color: var(--elk-fg-brighter);
         h1,
         h2,
         h3 {
-            color: var(--fg1);
+            color: var(--elk-fg-brighter);
         }
         code {
             background-color: inherit;
             font-family: var(--monospaced);
-            font-size: var(--monospaced-size);
+            font-size: var(--elk-font-size);
         }
 
         a.srclink {
             padding: 0rem 1rem;
-            color: var(--col_accent);
+            color: var(--elk-aqua);
         }
         .collapse-toggle {
             transform: translateY(-3px);
-            color: var(--fg3);
+            color: var(--elk-fg-dark);
         }
     }
     
     /* docs.rs root */
     input#search {
-        background-color: var(--bg0);
+        background-color: var(--elk-bg-dark);
         border: none !important;
         box-shadow: none !important;
     }
     
     .pure-button-normal {
-        background: var(--bg0) !important;
-        color: var(--fg2);
-        border-color: var(--bg3) !important;
+        background: var(--elk-bg-dark) !important;
+        color: var(--elk-fg-brighter);
+        border-color: var(--elk-bg-dark) !important;
     }
 
     /* search result list */
     .recent-releases-container {
         .date {
-            color: var(--fg3);
+            color: var(--elk-fg-dark);
         }
         *:not(.date) {
-            color: var(--fg1) !important;
+            color: var(--elk-fg-brighter) !important;
         }
         *:hover {
             background-color: inherit !important;
@@ -241,36 +255,36 @@ url-prefix("https://gtk-rs.org/docs/") {
         font-family: var(--monospaced);
     }
     pre.rust {
-        background: var(--bg0) !important;
+        background: var(--elk-bg-dark) !important;
         .kw {
-            color: var(--col_blue);
+            color: var(--elk-blue);
         }
         .self,
         .bool-val,
         .prelude-val,
         .attribute,
         .attribute .ident {
-            color: var(--col_accent);
+            color: var(--elk-aqua);
         }
     }
     
     .warning {
-        background-color: var(--col_blue) !important;
-        color: var(--bg1);
+        background-color: var(--elk-blue) !important;
+        color: var(--elk-bg-darkish);
     }
     
     
     
     .pure-menu {
         .pure-menu-list * {
-            color: var(--fg1) !important;
+            color: var(--elk-fg-brighter) !important;
         }
         .pure-menu-link:hover {
-            background-color: var(--bg0) !important;
+            background-color: var(--elk-bg-dark) !important;
         }
         .pure-menu-active {
-            background-color: var(--bg4) !important;
-            border-bottom: 1px solid var(--fg3) !important;
+            background-color: var(--elk-bg-darkish) !important;
+            border-bottom: 1px solid var(--elk-fg-dark) !important;
         }
     }
     
