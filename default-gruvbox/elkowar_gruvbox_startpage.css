@@ -8,32 +8,32 @@
 
 @-moz-document domain("startpage.com") {
   :root {
-    --elk-font-family: ${elk_font_family};
-    --elk-font-size: ${elk_font_size};
+    --elk-font-family: "Terminus (TTF)";
+    --elk-font-size: 14px;
 
-    --elk-bg-dark: ${elk_bg_dark};
-    --elk-bg-darkisher: ${elk_bg_darkisher};
-    --elk-bg-darkish: ${elk_bg_darkish};
-    --elk-bg-normal: ${elk_bg_normal};
-    --elk-bg-brighter: ${elk_bg_brighter};
+    --elk-bg-dark: #1d2021;
+    --elk-bg-darkisher: #202020;
+    --elk-bg-darkish: #222222;
+    --elk-bg-normal: #282828;
+    --elk-bg-brighter: #504945;
 
-    --elk-border: ${elk_border};
+    --elk-border: #353331;
 
-    --elk-fg-normal: ${elk_fg_normal};
-    --elk-fg-brighter: ${elk_fg_brighter};
-    --elk-fg-darker: ${elk_fg_darker};
-    --elk-fg-dark: ${elk_fg_dark};
-    --elk-fg-inactive: ${elk_fg_inactive};
+    --elk-fg-normal: #ebdbb2;
+    --elk-fg-brighter: #fbf1c7;
+    --elk-fg-darker: #d5c4a1;
+    --elk-fg-dark: #a89984;
+    --elk-fg-inactive: #696969;
 
-    --elk-red: ${elk_red};
-    --elk-purple: ${elk_purple};
-    --elk-blue: ${elk_blue};
-    --elk-green: ${elk_green};
-    --elk-aqua: ${elk_aqua};
-    --elk-yellow: ${elk_yellow};
-    --elk-orange: ${elk_orange};
+    --elk-red: #fb4934;
+    --elk-purple: #b16286;
+    --elk-blue: #458588;
+    --elk-green: #b8bb26;
+    --elk-aqua: #83c07c;
+    --elk-yellow: #fabd2f;
+    --elk-orange: #fe8019;
 
-    --elk-accent: ${elk_accent};
+    --elk-accent: var(--elk-aqua);
   }
 
   * {

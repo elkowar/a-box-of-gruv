@@ -1,0 +1,26 @@
+  export elk_font_family='"Terminus (TTF)"'
+  export elk_font_size='16px'
+
+  export elk_bg_dark='#1d2021'
+  export elk_bg_darkisher='#202020'
+  export elk_bg_darkish='#222222'
+  export elk_bg_normal='#282828'
+  export elk_bg_brighter='#504945'
+
+  export elk_border='#353331'
+
+  export elk_fg_brighter='#fbf1c7'
+  export elk_fg_normal='#ebdbb2'
+  export elk_fg_darker='#d5c4a1'
+  export elk_fg_dark='#a89984'
+  export elk_fg_inactive='#696969'
+
+  export elk_red='#fb4934'
+  export elk_purple='#b16286'
+  export elk_blue='#458588'
+  export elk_green='#b8bb26'
+  export elk_aqua='#83c07c'
+  export elk_yellow='#fabd2f'
+  export elk_orange='#fe8019'
+
+  export elk_accent='var(--elk-aqua)'

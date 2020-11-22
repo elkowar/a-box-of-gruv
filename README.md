@@ -28,7 +28,7 @@ in there, you *enable `as Usercss` and click on "write new style".
 ![newstyle](./images/writenewstyle.png)
 
 Now, select all of the text that is already there, and delete it.
-The next step is to paste in the contents of the desired `.styl` file.
+The next step is to paste in the contents of the desired `.styl` file from the `./default-gruvbox/` directory.
 
 If you want to change anything, make sure you set the CSS Linter to "Stylelint", 
 as that one will accept the stylus syntax used here.
@@ -38,6 +38,16 @@ as that one will accept the stylus syntax used here.
 The Discord-theme can be installed using any css-loader of your choice. 
 If all you want is to apply this theme, I recommend [discocss](https://github.com/mlvzk/discocss).
 Follow the instructions for your chosen CSS loader, and load in the theme. That's all!
+
+### Generating your own versions of the themes
+
+This box not only contains finished gruvbox themes, but also a system for generating your own versions of them.
+To do that, you can use the generate.sh script.
+
+1. First, copy the `template` file and change it to match your desired colorscheme
+2. run `./generate.sh <name-of-your-theme> <path-to-your-template-file>`
+
+The script will then generate a version of the theme, ready for you to insert into your stylus and discord styles.
 
 ## Showcase
 
