@@ -68,6 +68,16 @@
   font-size: var(--elk-font-size) !important;
 }
 
+
+/* more dense sidebar */
+
+[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"] {
+    height: 25px !important;
+}
+[class*="sidebar"] [class*="containerDefault"] [class*="mainContent"] > * {
+    font-size: 15px !important;
+}
+
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-handle,
