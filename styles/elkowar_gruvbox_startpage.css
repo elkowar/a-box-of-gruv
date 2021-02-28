@@ -36,10 +36,12 @@
     --elk-accent: ${elk_accent};
   }
 
-  * {
+    * {
         font-family: xos4 Terminus !important;
         text-decoration: none;
     }
+    
+    
 html,
     body,
     .layout,
@@ -63,6 +65,7 @@ html,
     .linkHover {
         background-color: unset !important;
         border: none !important;
+        padding: 1px;
     }
 
     .sp-gl__container {
@@ -115,6 +118,18 @@ html,
         overflow: none;
     }
  
+    .sp-gl.sp-gl-- .sp-gl__container {
+        background-color: var(--elk-bg-darkish) !important;
+    }
+    .sp-gl.sp-gl-- .sp-gl__container * {
+        color: var(--elk-fg-normal) !important;
+        
+        font-style: normal;
+        font-size: var(--elk-font-size) !important;
+    }
+    
+
+    
     
     
     *[class^="layout-"][class$="__mainline"],
@@ -337,6 +352,4 @@ html,
     .vo-sp .vo-sp__description {
         color: var(--elk-fg) !important;
     }
-}
-
 }
