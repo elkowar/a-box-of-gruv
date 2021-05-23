@@ -1,0 +1,86 @@
+/* ==UserStyle==
+@name           idris-lang documentation
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    gruvboxed duckduckgo
+@author         ElKowar
+@preprocessor   stylus
+==/UserStyle== */
+@-moz-document url-prefix("https://www.idris-lang.org/docs/idris2/") {
+    :root {
+        --elk-font-family: "Terminus (TTF)";
+        --elk-font-size: 16px;
+        
+        --elk-bg-dark: #1d2021;
+        --elk-bg-darkisher: #202020;
+        --elk-bg-darkish: #222222;
+        --elk-bg-normal: #282828;
+        --elk-bg-brighter: #504945;
+        
+        --elk-border: #353331;
+        
+        --elk-fg-normal: #ebdbb2;
+        --elk-fg-brighter: #fbf1c7;
+        --elk-fg-darker: #d5c4a1;
+        --elk-fg-dark: #a89984;
+        --elk-fg-inactive: #696969;
+        
+        --elk-red: #fb4934;
+        --elk-purple: #b16286;
+        --elk-blue: #458588;
+        --elk-green: #b8bb26;
+        --elk-aqua: #83c07c;
+        --elk-yellow: #fabd2f;
+        --elk-orange: #fe8019;
+        
+        --elk-accent: var(--elk-aqua);
+    }
+    * {
+        border-color: var(--elk-fg-normal) !important;
+    }
+
+    html,
+    body,
+    .container,
+    footer,
+    header {
+        background: var(--elk-bg-normal) !important;
+        color: var(--elk-fg-normal);
+        border-bottom: none;
+
+        & > dl {
+            & > br {
+                display: none;
+            }
+            dt {
+                background: var(--elk-bg-dark) !important;
+                border: none !important;
+
+                .name {
+                    color: var(--elk-aqua);
+                }
+                .type {
+                    color: var(--elk-blue);
+                    margin-right: 0.5ch !important;
+                }
+
+                span {
+                    display: inline !important;
+                }
+            }
+            & > dt {
+                padding: 10px !important;
+                padding-left: 20px !important;
+                border-bottom: 1px solid var(--elk-border) !important;
+            }
+            dd {
+                padding: 10px;
+                padding-left: 20px !important;
+                font-size: unset !important;
+                background: var(--elk-bg-dark);
+                margin: 0 !important;
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+}
