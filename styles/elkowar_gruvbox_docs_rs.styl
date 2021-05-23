@@ -226,6 +226,15 @@ url-prefix("https://gtk-rs.org/docs/") {
             transform: translateY(-3px);
             color: var(--elk-fg-dark);
         }
+        .item-info {
+            &:before {
+                color: var(--fg3) !important;
+            }
+            .stab {
+                background-color: var(--bg0) !important;
+                border: none !important;
+            }
+        }
     }
     
     /* docs.rs root */
@@ -262,6 +271,9 @@ url-prefix("https://gtk-rs.org/docs/") {
         background: var(--elk-bg-dark) !important;
         .kw {
             color: var(--elk-blue);
+        }
+        .where {
+            color: var(--fg3) !important;
         }
         .self,
         .bool-val,
