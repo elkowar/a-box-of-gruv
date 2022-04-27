@@ -45,6 +45,10 @@ url-prefix("https://gtk-rs.org/docs/") {
         --monospaced: "Jetbrains Mono"
     }
 
+    *:target {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: none;
+    }
 
     * {
         color: var(--elk-fg-brighter);
@@ -65,7 +69,7 @@ url-prefix("https://gtk-rs.org/docs/") {
         color: var(--elk-aqua);
     }
 
-    .help-button {
+    .help-button, #help-button {
         background: var(--elk-bg-darkish);
         margin-top: 3px;
         border: none;
@@ -263,11 +267,22 @@ url-prefix("https://gtk-rs.org/docs/") {
         }
     }
 
+    /* Code view */
 
+    #source-sidebar, #sidebar-toggle {
+        background: var(--elk-bg) !important;
+        a {
+            background: none !important;
+        }
+        .files a {
+            color: var(--elk-fg) !important;
+        }
+    }
+    
     pre {
         font-family: var(--monospaced);
     }
-    pre.rust {
+    .example-wrap, .line-numbers, pre.rust {
         background: var(--elk-bg-dark) !important;
         .kw {
             color: var(--elk-blue);
